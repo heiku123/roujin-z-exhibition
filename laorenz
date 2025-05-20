@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Roujin Z Exhibition</title>        
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; margin: 2rem; line-height: 1.6; }
+    nav { margin-bottom: 2rem; }
+    nav a { margin-right: 1rem; text-decoration: none; font-weight: bold; }
+    .lang { display: none; }
+    .lang.active { display: block; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" onclick="setLang('en')">EN</a>
+  <a href="#" onclick="setLang('zh')">中文</a>
+  <a href="#" onclick="setLang('de')">DE</a>
+</nav>
+
+<div id="lang-en" class="lang active">
+  <h1>Roujin Z</h1>
+  <p><strong>Artist:</strong> Manman Huang<br>
+  <strong>Year:</strong> 2025<br>
+  <strong>Medium:</strong> Aluminum, rehab straps, video, glue</p>
+  <p>Bathing, usually associated with comfort and dignity, becomes for the disabled a site of exposure and medical control. The fragmented metal bathtub symbolizes the body's disempowerment in care systems.</p>
+</div>
+
+<div id="lang-zh" class="lang">
+  <h1>老人Z</h1>
+  <p><strong>艺术家：</strong>黄曼曼<br>
+  <strong>创作年份：</strong>2025<br>
+  <strong>材料：</strong>铝、复健束带、影像、胶水</p>
+  <p>沐浴是关乎尊严与舒适的私密行为。但对失能者而言，却常变成暴露与制度控制的场所。金属浴缸的断裂象征着他们在照护体系中的失权。</p>
+</div>
+
+<div id="lang-de" class="lang">
+  <h1>Roujin Z</h1>
+  <p><strong>Künstlerin:</strong> Manman Huang<br>
+  <strong>Jahr:</strong> 2025<br>
+  <strong>Material:</strong> Aluminium, Reha-Gurte, Video, Klebstoff</p>
+  <p>Das Baden, sonst ein Akt der Würde und Intimität, wird für behinderte Menschen zur Szene der Kontrolle. Die fragmentierte Metallbadewanne symbolisiert den zersplitterten Körper im Pflegeapparat.</p>
+</div>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+}
+</script>
+
+</body>
+</html>
